@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile_banking_app/constants/colors.dart';
 import 'package:mobile_banking_app/screens/home/home.dart';
 
 void main() {
@@ -18,7 +17,6 @@ class Application extends StatelessWidget {
         title: 'Banking Application',
         home: HomePage(),
         theme: ThemeData(
-          backgroundColor: kBackground,
           fontFamily: 'Gilroy'
         ),
     );
