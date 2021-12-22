@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_banking_app/screens/account/widgets/account_app_bar.dart';
 import 'package:mobile_banking_app/constants/colors.dart';
 
 class AccountPage extends StatefulWidget {
@@ -15,29 +16,7 @@ class _AccountPageState extends State<AccountPage> {
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top+25),
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Image.asset("assets/images/profile.png", width: 50, height: 50),
-                      ),
-                      SizedBox(width: 20),
-                      Text("Fabio M.", style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18
-                      ))
-                    ],
-                  ),
-                  Icon(Icons.settings)
-                ],
-              ),
-            ),
+            AccountAppBar(),
             SizedBox(height: 35),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 30),
