@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_app/screens/account/widgets/account_app_bar.dart';
 import 'package:mobile_banking_app/constants/colors.dart';
+import 'package:mobile_banking_app/screens/account/widgets/account_balance.dart';
+import 'package:mobile_banking_app/screens/account/widgets/card_produced.dart';
+
 
 class AccountPage extends StatefulWidget {
   @override
@@ -18,43 +21,11 @@ class _AccountPageState extends State<AccountPage> {
           children: [
             AccountAppBar(),
             SizedBox(height: 35),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Row(
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Account balance", style: TextStyle(color: kGrey, fontSize: 18), textAlign: TextAlign.left),
-                      Text("\$2,707.42", style: TextStyle(
-                          fontSize: 48, fontWeight: FontWeight.bold
-                      ), textAlign: TextAlign.left)
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            AccountBalance(),
             SizedBox(height: 35),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Row(
-                children: [
-                  Container(
-                    height: 150,
-                    width: MediaQuery.of(context).size.width-60,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment(-1, 1),
-                        end: Alignment(1, 0),
-                        colors: [kPrimaryColor, kSecondaryColor], // red to yellow
-                      ),
-                      borderRadius: BorderRadius.circular(26)
-                    ),
-                  )
-                ],
-              ),
-            )
+            CardProduced(),
+            SizedBox(height: 35),
+
           ],
         ),
       ),
