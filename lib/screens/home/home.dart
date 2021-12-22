@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_app/constants/colors.dart';
+import 'package:mobile_banking_app/screens/account/account.dart';
 import 'package:mobile_banking_app/screens/home/widgets/catch_phrase.dart';
 import 'package:mobile_banking_app/widgets/button_builder.dart';
 
@@ -42,7 +43,11 @@ class _HomePageState extends State<HomePage> {
                         CatchPhrase(),
                         Column(
                           children: [
-                            ButtonBuilder("Sign up", backgroundColor: kSecondaryColor),
+                            ButtonBuilder("Sign up", backgroundColor: kSecondaryColor, onPressed: () {
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => AccountPage())
+                              );
+                            }),
                             SizedBox(height: 15),
                             ButtonBuilder("Log in", backgroundColor: Colors.transparent, color: Colors.black),
                           ],
