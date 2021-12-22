@@ -3,7 +3,7 @@ import 'package:mobile_banking_app/screens/account/widgets/account_app_bar.dart'
 import 'package:mobile_banking_app/constants/colors.dart';
 import 'package:mobile_banking_app/screens/account/widgets/account_balance.dart';
 import 'package:mobile_banking_app/screens/account/widgets/card_produced.dart';
-
+import 'package:mobile_banking_app/screens/account/widgets/detail/detail.dart';
 
 class AccountPage extends StatefulWidget {
   @override
@@ -25,7 +25,7 @@ class _AccountPageState extends State<AccountPage> {
             SizedBox(height: 35),
             CardProduced(),
             SizedBox(height: 35),
-
+            Detail()
           ],
         ),
       ),
