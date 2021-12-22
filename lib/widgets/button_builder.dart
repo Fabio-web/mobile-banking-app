@@ -10,14 +10,15 @@ class ButtonBuilder extends StatelessWidget {
   final TextStyle? style;
   final Color? backgroundColor;
   final Color? color;
-
+  final Function()? onPressed;
 
   ButtonBuilder(this.text, {
     this.borderRadius,
     this.width,
     this.style,
     this.backgroundColor,
-    this.color
+    this.color,
+    this.onPressed
   });
 
   @override
@@ -26,7 +27,7 @@ class ButtonBuilder extends StatelessWidget {
     double widthQuery = MediaQuery.of(context).size.width;
 
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed ?? () {},
       child: Container(
         padding: EdgeInsets.symmetric(vertical: 15),
         width: width ?? widthQuery,
