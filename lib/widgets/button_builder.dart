@@ -7,6 +7,7 @@ class ButtonBuilder extends StatelessWidget {
   final String text;
   final BorderRadiusGeometry? borderRadius;
   final double? width;
+  final double? paddingVertical;
   final TextStyle? style;
   final Color? backgroundColor;
   final Color? color;
@@ -15,6 +16,7 @@ class ButtonBuilder extends StatelessWidget {
   ButtonBuilder(this.text, {
     this.borderRadius,
     this.width,
+    this.paddingVertical,
     this.style,
     this.backgroundColor,
     this.color,
@@ -29,7 +31,7 @@ class ButtonBuilder extends StatelessWidget {
     return TextButton(
       onPressed: onPressed ?? () {},
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 15),
+        padding: EdgeInsets.symmetric(vertical: paddingVertical ?? 15),
         width: width ?? widthQuery,
         child: Text(text,
             textAlign: TextAlign.center,
