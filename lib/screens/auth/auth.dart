@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_banking_app/constants/colors.dart';
 import 'package:mobile_banking_app/screens/account/account.dart';
-import 'package:mobile_banking_app/screens/home/widgets/catch_phrase.dart';
+import 'package:mobile_banking_app/screens/auth/auth_login.dart';
+import 'package:mobile_banking_app/screens/auth/widgets/catch_phrase.dart';
 import 'package:mobile_banking_app/widgets/button_builder.dart';
 
-class HomePage extends StatefulWidget {
+class AuthPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _AuthPageState createState() => _AuthPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _AuthPageState extends State<AuthPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,11 @@ class _HomePageState extends State<HomePage> {
                               );
                             }),
                             SizedBox(height: 15),
-                            ButtonBuilder("Log in", backgroundColor: Colors.transparent, color: Colors.black),
+                            ButtonBuilder("Log in", backgroundColor: Colors.transparent, color: Colors.black, onPressed: () {
+                              Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (context) => AuthLoginPage())
+                              );
+                            }),
                           ],
                         )
                       ],

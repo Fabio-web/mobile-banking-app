@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile_banking_app/screens/home/home.dart';
+import 'package:mobile_banking_app/screens/auth/auth.dart';
 
 void main() {
   runApp(Application());
@@ -15,7 +15,7 @@ class Application extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Banking Application',
-        home: HomePage(),
+        home: AuthPage(),
         theme: ThemeData(
           fontFamily: 'Gilroy'
         ),
