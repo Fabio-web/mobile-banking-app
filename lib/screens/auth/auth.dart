@@ -45,7 +45,7 @@ class _AuthPageState extends State<AuthPage> {
                         Column(
                           children: [
                             ButtonBuilder("Sign up", backgroundColor: kSecondaryColor, onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(builder: (context) => AccountPage())
                               );
                             }),

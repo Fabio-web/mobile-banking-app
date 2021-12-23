@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_banking_app/screens/account/widgets/account_app_bar.dart';
 import 'package:mobile_banking_app/constants/colors.dart';
 import 'package:mobile_banking_app/screens/account/widgets/account_balance.dart';
-import 'package:mobile_banking_app/screens/account/widgets/card_produced.dart';
+import 'package:mobile_banking_app/screens/account/widgets/card_delivery_status.dart';
 import 'package:mobile_banking_app/screens/account/widgets/detail/detail.dart';
 
 class AccountPage extends StatefulWidget {
@@ -23,7 +23,7 @@ class _AccountPageState extends State<AccountPage> {
             SizedBox(height: 35),
             AccountBalance(),
             SizedBox(height: 35),
-            CardProduced(),
+            CardDeliveryStatus(),
             SizedBox(height: 35),
             Detail()
           ],
