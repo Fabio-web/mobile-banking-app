@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="test.fabio.mobile_banking_app">
+    <uses-permission android:name="android.permission.VIBRATE" />
    <application
         android:label="mobile_banking_app"
         android:name="${applicationName}"

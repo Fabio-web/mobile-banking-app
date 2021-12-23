@@ -4,7 +4,6 @@ import 'package:mobile_banking_app/constants/colors.dart';
 import 'package:mobile_banking_app/models/account.dart';
 import 'package:mobile_banking_app/models/transaction.dart';
 import 'package:mobile_banking_app/screens/account/widgets/detail/detail_item.dart';
-import 'package:mobile_banking_app/screens/account/widgets/detail/detail_transaction.dart';
 
 class DetailList extends StatelessWidget {
   final int selected;
@@ -62,16 +61,10 @@ class DetailList extends StatelessWidget {
     );
   }
 
-  Iterable<GestureDetector> _buildListTransactionItem(BuildContext context, List<Transaction> transactions) {
-    return transactions.map((transaction) => GestureDetector(
-      behavior: HitTestBehavior.translucent,
-      onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailTransaction()));
-      },
-      child: Padding(
-        padding: EdgeInsets.only(top: 20),
-        child: DetailItem(transactions.firstWhere((element) => element == transaction)),
-      )
+  Iterable<Padding> _buildListTransactionItem(BuildContext context, List<Transaction> transactions) {
+    return transactions.map((transaction) => Padding(
+      padding: EdgeInsets.only(top: 20),
+      child: DetailItem(transactions.firstWhere((element) => element == transaction)),
     ));
   }
 }
