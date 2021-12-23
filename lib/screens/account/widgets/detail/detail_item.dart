@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:mobile_banking_app/constants/colors.dart';
 import 'package:mobile_banking_app/models/transaction.dart';
 import 'package:mobile_banking_app/utils.dart';
-import 'package:flutter/services.dart';
+import 'package:mobile_banking_app/widgets/modal_bottom_sheet_builder.dart';
 
 class DetailItem extends StatelessWidget {
 
@@ -65,29 +65,14 @@ class DetailItem extends StatelessWidget {
   }
 
   void _onItemLongPressed(BuildContext context) {
-
-    HapticFeedback.vibrate();
-
-    showModalBottomSheet(
-      isScrollControlled: true,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-      ),
-      context: context, 
-      builder: (context) => Wrap(
-        children: [Container(
-          padding: EdgeInsets.only(left: 25, right: 25, top: 7),
+    ModalBottomSheetBuilder(
+      context: context,
+      hapticFeedback: true,
+      children: [
+        Container(
+          padding: EdgeInsets.only(left: 25, right: 25, top: 50),
           child: Column(
             children: [
-              Container(
-                width: 50, height: 5,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(6),
-                  color: kGrey.withOpacity(0.4),
-                ),
-              ),
-              SizedBox(height: 50),
-
               ClipRRect(
                 borderRadius: BorderRadius.circular(36),
                 child: Image.asset(transaction.logoUrl, width: 100),
@@ -115,8 +100,8 @@ class DetailItem extends StatelessWidget {
 
             ],
           ),
-        )],
-      )
+        )
+      ]
     );
   }
 

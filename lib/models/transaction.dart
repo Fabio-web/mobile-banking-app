@@ -36,7 +36,7 @@ class Transaction {
     return [
       Transaction("Apple", TransactionType.appliances, "assets/images/transactions/apple.png", -1897, DateTime.utc(2021, 12, 22, 17, 53)),
       Transaction("John D.", TransactionType.refill, "assets/images/transactions/friend.png", 250, DateTime.utc(2021, 12, 20, 11, 19)),
-      Transaction("Mcdo", TransactionType.food, "assets/images/transactions/mcdo.png", -18.96, DateTime.utc(2021, 12, 20, 13, 42)),
+      Transaction("Mcdo", TransactionType.food, "assets/images/transactions/mcdo.png", -48.50, DateTime.utc(2021, 12, 20, 13, 42)),
     ];
 
   }
